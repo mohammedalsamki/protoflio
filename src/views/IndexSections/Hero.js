@@ -16,91 +16,40 @@
 
 */
 import React from "react";
+import { Button, Card, Container, Row, Col } from "reactstrap";
+
 
 // reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
 import reactWhite from "assets/img/brand/argon-react-white.png";
 import creative from "assets/img/brand/creativetim-white-slim.png";
+import profile from "assets/img/theme/IMG_0660.jpg";
+import SimpleFooter from "components/Footers/SimpleFooter.js";
+
+
+
 
 class Hero extends React.Component {
   render() {
+    // componentDidMount() {
+    //   document.documentElement.scrollTop = 0;
+    //   document.scrollingElement.scrollTop = 0;
+    //   this.refs.main.scrollTop = 0;
+    // }
     return (
       <>
-        <div className="position-relative">
-          {/* Hero for FREE version */}
-          <section className="section section-hero section-shaped">
-            {/* Background circles */}
-            <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
+          <section className="section-profile-cover section-shaped my-0">
+            {/* Circles background */}
+            <div className="shape shape-style-1 shape-default alpha-4">
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
             </div>
-            <Container className="shape-container d-flex align-items-center py-lg">
-              <div className="col px-0">
-                <Row className="align-items-center justify-content-center">
-                  <Col className="text-center" lg="6">
-                    <img
-                      alt="..."
-                      className="img-fluid"
-                      src={reactWhite}
-                      style={{ width: "200px" }}
-                    />
-                    <p className="lead text-white">
-                      A beautiful Design System for Bootstrap 4. It's Free and
-                      Open Source.
-                    </p>
-                    <div className="btn-wrapper mt-5">
-                      <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="ni ni-cloud-download-95" />
-                        </span>
-                        <span className="btn-inner--text">Download React</span>
-                      </Button>{" "}
-                      <Button
-                        className="btn-icon mb-3 mb-sm-0"
-                        color="github"
-                        href="https://github.com/creativetimofficial/argon-design-system-react"
-                        size="lg"
-                        target="_blank"
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="fa fa-github" />
-                        </span>
-                        <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Star us</span>
-                          on Github
-                        </span>
-                      </Button>
-                    </div>
-                    <div className="mt-5">
-                      <small className="text-white font-weight-bold mb-0 mr-2">
-                        *proudly coded by
-                      </small>
-                      <img
-                        alt="..."
-                        className="ml-1"
-                        style={{ height: "28px" }}
-                        src={creative}
-                      />
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            </Container>
             {/* SVG separator */}
-            <div className="separator separator-bottom separator-skew zindex-100">
+            <div className="separator separator-bottom separator-skew">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
@@ -116,7 +65,99 @@ class Hero extends React.Component {
               </svg>
             </div>
           </section>
-        </div>
+          <section className="section">
+            <Container>
+              <Card className="card-profile shadow mt--300">
+                <div className="px-4">
+                  <Row className="justify-content-center">
+                    <Col className="order-lg-2" lg="3">
+                      <div className="card-profile-image">
+                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            className="rounded-circle"
+                            src={profile}
+                          />
+                        </a>
+                      </div>
+                    </Col>
+                    <Col
+                      className="order-lg-3 text-lg-right align-self-lg-center"
+                      lg="4"
+                    >
+                      <div className="card-profile-actions py-4 mt-lg-0">
+                        <Button
+                          className="mr-4"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                          size="sm"
+                        >
+                          Connect
+                        </Button>
+                        <Button
+                          className="float-right"
+                          color="default"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                          size="sm"
+                        >
+                          Message
+                        </Button>
+                      </div>
+                    </Col>
+                    <Col className="order-lg-1" lg="4">
+                      <div className="card-profile-stats d-flex justify-content-center">
+                        <div>
+                          <span className="heading">2</span>
+                          <span className="description">Years of Experiance</span>
+                        </div>
+                        <div>
+                          <span className="heading">2</span>
+                          <span className="description">group Projects</span>
+                        </div>
+                        <div>
+                          <span className="heading">500+</span>
+                          <span className="description">hours programming</span>
+                        </div>
+                      </div>
+                    </Col>
+                  </Row>
+                  <div className="text-center mt-5">
+                    <h3>
+                      Mohammed AL-Samaki{" "}
+                      <span className="font-weight-light">, 25</span>
+                    </h3>
+                    <div className="h6 font-weight-300">
+                      <i className="ni location_pin mr-2" />
+                      Jordan , Irbid
+                    </div>
+                    <div className="h6 mt-4">
+                      <i className="ni business_briefcase-24 mr-2" />
+                      Full stack Webdeveloper 
+                    </div>
+                    <div>
+                      <i className="ni education_hat mr-2" />
+                      LTUC-ASAC
+                    </div>
+                  </div>
+                  <div className="mt-5 py-5 border-top text-center">
+                    <Row className="justify-content-center">
+                      <Col lg="9">
+                        <p>
+                        Hello. My name is Mohammed Al-Samaki. I am a student at AISAC software dev. program and I really enjoy learning new technologies and becoming part of the global developers group
+                        </p>
+                        <a href="https://github.com/mohammedalsamki"  target="_blank">
+                          Check me 
+                        </a>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </Card>
+            </Container>
+          </section>
+
       </>
     );
   }
